@@ -12,7 +12,7 @@ namespace lab3
         /// <summary>
         /// Порог функции активности
         /// </summary>
-        static int bias = 5;
+        static int bias = 4;
 
         /// <summary>
         /// Выборка букв
@@ -106,7 +106,7 @@ namespace lab3
             #endregion
 
             //Процесс навчання
-            for (int i = 0; i < 10000; i++)
+            for (int i = 0; i < 1200; i++)
             {
                 var option = random.Next(0, 11 + 1);
 
@@ -122,6 +122,24 @@ namespace lab3
                 }
 
             }
+
+            //ПОСЛІДОВНИЙ ПЕРЕГЛЯД УСІХ ЛІТЕР
+            //for(int i=0; i<1000; i++)
+            //{
+            //    for(int j=0; j<12; j++)
+            //    {
+            //        if (books[j] != 'Р')
+            //        {
+            //            if (proceed(data[j]))
+            //                decrease(data[j]);
+            //        }
+            //        else
+            //        {
+            //            if (!proceed(lit9))
+            //                increse(lit9);
+            //        }
+            //    }
+            //}
 
             #region consoleOutput
             Console.WriteLine(String.Join(",", weights));
